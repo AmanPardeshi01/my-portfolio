@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
 
   // 👇 Add or update this line with your GitHub repo name
-  base: "/my-portfolio/",
+  base: "/my-portfolio/", 
 
   resolve: {
     alias: {
