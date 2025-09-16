@@ -1,11 +1,14 @@
 {
-  "name": "vite_react_shadcn_ts",
-  "private": true,
+  "name": "my-portfolio",
   "version": "0.0.0",
+  "private": true,
+  "homepage": "https://AmanPardeshi01.github.io/my-portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:gh": "cross-env DEPLOY_TARGET=GH_PAGES vite build",
+    "deploy": "npm run build:gh && gh-pages -d dist",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -45,9 +48,11 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
+    "cross-env": "^10.0.0",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.13",
+    "gh-pages": "^6.3.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",

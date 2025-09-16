@@ -13,7 +13,6 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
 
-    // ✅ Dynamically set base
     base: isGitHub ? "/my-portfolio/" : "/",
 
     resolve: {
