@@ -6,21 +6,42 @@ import { ExternalLink, Github } from 'lucide-react';
 import dibetes from '@/assets/dibetes.png';
 import toursandtravels from '@/assets/toursandtravels.png';
 import swabhiman from '@/assets/swabhiman.png';
+import Gemini from '@/assets/Gemini.png';
 
 const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
+      title: 'Swabhiman - NGO Website',
+      description: 'Delivered a responsive, accessible React & Tailwind CSS website to highlight Swabhiman’s mission—programmes in reproductive & child health, nutrition awareness, entrepreneurship training, and digital financial literacy.',
+      image: swabhiman,
+      tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind', 'Google Forms', 'Analytics', 'Apps Script', 'Git'],
+      liveUrl: 'https://swabhiman.org.in/',
+      githubUrl: 'https://github.com/AmanPardeshi01/Swabhimaan',
+      metrics: ['50+ teams using', '30% productivity boost', '4.9/5 user rating']
+    },
+    {
+      id: 2,
+      title: 'Gemini AI Clone',
+      description: 'Developed a React-based web app with Google Generative AI: Boosted conversational efficiency by 30%. Utilized Context API for efficient state management, Enhanced user response time by 25% through optimized data flow handling.',
+      image: Gemini,
+      tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind', 'Google Forms', 'Analytics', 'Apps Script', 'Git'],
+      liveUrl: 'https://amanpardeshi01.github.io/gemini-clone/',
+      githubUrl: 'https://github.com/AmanPardeshi01/gemini-clone',
+      metrics: ['50+ teams using', '30% productivity boost', '4.9/5 user rating']
+    },
+    {
+      id: 3,
       title: 'Diabeties Detection using Deep Learning.',
       description: 'Designed and implemented Diabetes Detection Using Deep Learning, leveraging cutting-edge deep learning methodologies to accurately detect diabetes-related patterns in medical data, contributing to early diagnosis and enhanced patient care.',
       image: dibetes,
       tech: ['Python', 'DL', 'ML', 'SQLLite', 'Spyder'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://github.com/AmanPardeshi01/DIABETES-DETECTION-USING-FOOT-THERMOGRAPHY-WITH-DEEP-LEARNING',
       githubUrl: 'https://github.com/AmanPardeshi01/DIABETES-DETECTION-USING-FOOT-THERMOGRAPHY-WITH-DEEP-LEARNING',
       metrics: ['99.9% uptime', '40% faster checkout', '500+ daily users']
     },
     {
-      id: 2,
+      id: 4,
       title: 'Tours & Travel Management System.',
       description: 'Developed a complete Tours and Travel Management System using PHP, MySQL, Bootstrap, and PDO PayPal integration. Designed and implemented a user-friendly interface for managing bookings and payments, enhancing the user experience.',
       image: toursandtravels,
@@ -29,16 +50,7 @@ const ProjectsSection = () => {
       githubUrl: 'https://github.com/AmanPardeshi01/Tours-and-Travel-Management-System',
       metrics: ['10k+ messages/day', '< 100ms latency', '256-bit encryption']
     },
-    {
-      id: 3,
-      title: 'Swabhiman - NGO Website',
-      description: 'Delivered a responsive, accessible React & Tailwind CSS website to highlight Swabhiman’s mission—programmes in reproductive & child health, nutrition awareness, entrepreneurship training, and digital financial literacy.',
-      image: swabhiman,
-      tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind', 'Google Forms', 'Analytics', 'Apps Script', 'Git'],
-      liveUrl: 'https://swabhiman.org.in/',
-      githubUrl: 'https://github.com/AmanPardeshi01/Swabhimaan',
-      metrics: ['50+ teams using', '30% productivity boost', '4.9/5 user rating']
-    }
+
   ];
 
   return (
@@ -82,73 +94,73 @@ const ProjectsSection = () => {
               whileHover={{ y: -8 }}
             >
               <Card className="group card-glass border-border/50 overflow-hidden h-full">
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button size="icon" variant="secondary" className="h-8 w-8">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                  <Button size="icon" variant="secondary" className="h-8 w-8">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              <CardHeader>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  {project.description}
-                </CardDescription>
-              </CardHeader>
-
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Button size="icon" variant="secondary" className="h-8 w-8">
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </Button>
+                    <Button size="icon" variant="secondary" className="h-8 w-8">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
 
-                <div className="space-y-1 mb-4">
-                  {project.metrics.map((metric, i) => (
-                    <div key={i} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-2 h-2 bg-primary rounded-full mr-2" />
-                      {metric}
-                    </div>
-                  ))}
-                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
 
-                <div className="flex space-x-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                      Live Demo
-                      <ExternalLink className="ml-1 h-3 w-3" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="sm" className="flex-1">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                      Code
-                      <Github className="ml-1 h-3 w-3" />
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <div className="space-y-1 mb-4">
+                    {project.metrics.map((metric, i) => (
+                      <div key={i} className="flex items-center text-sm text-muted-foreground">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-2" />
+                        {metric}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex space-x-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    >
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Live Demo
+                        <ExternalLink className="ml-1 h-3 w-3" />
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="sm" className="flex-1">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Code
+                        <Github className="ml-1 h-3 w-3" />
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
               </Card>
             </motion.div>
           ))}
